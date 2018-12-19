@@ -1,0 +1,40 @@
+This list is FLEXIBLE, can come back to any of these at any time. When finished with a task, double check with group leader and edit task with strikethrough formatting. Leave a note at the end of the document detailing day/time completed, and short summary of what you did.
+
+    Dec. 18th-20th Tasks
+      Setup objects, fields, relationships
+      Validation Rules
+      Create Records for Objects
+      Page Layouts
+      Home Page (Come back when completed with Reports and Dashboards)
+      ***Security
+      ***Sharing Rules
+
+    Dec. 21st-25th
+      Set up Reports/Dashboards (Dashboards into Homepage)
+      Implement Cases
+      Case Teams
+      Case Queues
+      Web-to-Case
+      Auto-Response Rules
+      Case Escalation
+      Knowledge
+      Workflow Rules/Process Builder
+      Flows (specifically creating customers)
+      Sales Processes/Paths
+      Web-to-Lead
+      Auto-Response Rules
+      Communities
+      Knowledge
+      Questions
+      Ideas	
+
+    Dec.26th-30th
+      Chatter
+      Activities
+      Email Services
+      Mobile
+      Visualforce
+      Apex
+      Create a Presentation
+
+CHANGE TIMELINE UP

@@ -1,0 +1,33 @@
+/*
+    This is a trailhead for the communities
+
+  https://trailhead.salesforce.com/content/learn
+    /projects/communities_theme_layout
+    /create_community_theme
+*/
+BUILD A CUSTOM THEME LAYOUR COMPONENT FOR LIGHTNING
+  CREATE A COMMUNITY
+    A custom theme layout componenet is the best way to construct the structure of a Lightning community template
+      and override its defaults
+    A theme layout component defines the top-level layout for the template pages 
+    (1) in your Lightning community. It includes the common header and footer 
+    (2), and often includes navigation, search, and the user profile menu.
+    In contrast, the content layout (3) defines the content regions of your pages, such as a two-column layout.
+      you can override a template's default structure by creating a custom Lightning componenet
+      in Developer Console implementing ' forceCommunity:themeLayout ' interface
+      to use custom Lightning components in your pages, u must assign component to a theme layout in Community Builder
+        then apply the them layout in each page's properties
+
+        //link below is pic showing template that includes a theme layout and it associated Lightning components
+            https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70
+            /learn/projects/communities_theme_layout
+            /create_community_theme/images
+            /11ac8c441567189fceef8e6d78c31e84_community_builder_theme2.png
+
+    Community Builder doesn't let you assign custom Lightning component directly to a page
+     to instantly update structure of every page that a theme layout applies
+     to simply by swapping Lightning component associated w/ theme layout
+     //so that time isn't wasted updating every single page; allows quick refresh
+
+  CREATE A CUSTOM THEME LAYOUR COMPONENT
+
