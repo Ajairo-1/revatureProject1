@@ -29,5 +29,86 @@ BUILD A CUSTOM THEME LAYOUR COMPONENT FOR LIGHTNING
      to simply by swapping Lightning component associated w/ theme layout
      //so that time isn't wasted updating every single page; allows quick refresh
 
-  CREATE A CUSTOM THEME LAYOUR COMPONENT
+  CREATE A CUSTOM THEME LAYOUT COMPONENT
+    Define Theme Layout Component
+     to appear in Community Builder in the Settings|Theme|Configure area, a theme layout component must implement
+      forceCommunity:themeLayout inteface
+    Add {!v.body} wherever you want the content, which changes from page to page, to appear within the theme layout component.
+    Attributes declared as Aura.Component[] and included in your markup are rendered in the theme layout component as open regions, 
+      which form the basic structure of your theme layout. Users can add drag-and-drop components to these regions in Community Builder.
+    The code uses the SLDS grid system to add structure to the layout.
 
+  ADD A DESIGN RESOURCE
+    controls which component attr are exposed in Community Builder
+    describes the design-time behavior of the Lightning component
+      -infothat visual tools need to display the componenet in a page or app
+
+  ADD A COMPANY LOGO
+   Define a Tokens Bundle
+   The tokens bundle extends forceCommunity:base, which gives access to all tokens exposed by SLDS 
+    and the branding values defined in the Theme panel in Community Builder.
+   
+   Add a CSS Resource
+    In Community Builder, each property in Theme panel maps to one or more standard design tokens. 
+    by using tokens in CSS of component, easy to use the Theme panel to quickly update the component’s appearance.
+    IN this case  we’re interested in the Company Logo property, which maps to the 'brandLogoImage' token.
+    The code uses the brandLogoImage token (wrapped by a t()) 
+      to inject the company logo in the CSS as the background image of the logoContainer.
+
+  BUILD A VERTICAL NAV MENU
+   Create and Test the Nav Component
+    Extending forceCommunity:navigationMenuBase component gives new component automatic access to all navigation menu items defined in the community’s Navigation Menu component. 
+   Admins can define and update the items in the Navigation Menu in Community Builder.
+   To show in action, the unordered list iterates through array of menuItems, 
+    which is defined in the extended abstract component, 
+    and outputs <li> for each entry in the array.
+
+    This code takes advantage of aura expression syntax to do some nifty things. 
+    You can conditionally add the slds-is-active class to the list item depending on whether the item is active. 
+    You also set the data-menu-item-id to be the item’s unique ID, which you can use later to navigate to the corresponding item. 
+    In this way, you need only one click listener for the entire list, instead of adding one for each list item.
+    
+    Code Highlight:
+      Note the JavaScript syntax for accessing data attributes on HTML elements, which allows you to get that item’s ID.
+
+    Add CSS to the Custom Theme Layout Component
+      To get everything looking peachy, remove some unwanted margins from theme layout component 
+        and set the main content width.
+  BUILD A CUSTOM SEARCH COMPONENT
+   Define a Custom Search Component 
+     The customcode class uses a <lightning:ButtonIcon> component & includes a click handler
+     It also includes an attribute called searchText to contain the search text and 
+       uses a <ui:inputText> component (instead of <input>) to bind the values.
+
+   Create an Apex Controller
+    The searchForIds method takes a String searchText and returns a list of strings representing found IDs. 
+    For now, we just return the search string itself.
+    This code reads the value of the input text, sends it to the server-side Apex controller, and waits for a response. 
+    If you test the example, you see an array logged to the browser console.
+   
+   Implement a Search Query w/ SOSL
+     use SOSL in Apex class to create query that finds objects whose fields contain the input search text.
+
+   Return the Search Results to a Custom Page
+    this is how to take record IDs & redirect to new page containing record names & links to full record details. 
+    To do this, you need:
+     A Lightning component that displays a single record with a link to the record details
+     A drag-and-drop component for Community Builder that lists the records
+     A custom Community Builder page that uses the drag-and-drop component to show the returned records
+
+   Create a Drag-and-Drop Component That Lists the Records
+    Create a drag-and-drop component that appears in the Components panel in Community Builder. 
+    When added to the custom page, it displays the list of returned records for the search term.
+     Code Highlights:
+
+     To appear in the Components panel in Community Builder, 
+      a component must implement the forceCommunity:availableForAllPageTypes interface. 
+     If you select the Lightning Communities Page checkbox when creating a new component, 
+      the interface is automatically added to the default code.
+     Mark your resources, such as a component, with access="global" to make the resource usable outside of your own org. 
+     For example, if you want a component to be usable in an installed package or 
+      by a Lightning App Builder user or a Community Builder user in another org.
+
+  ADD CONFIGURATION PROPERTIES TO THE THEME LAYOUT
+   you add a property to the theme layout component, 
+    which lets you hide the search component completely in Community Builder.
