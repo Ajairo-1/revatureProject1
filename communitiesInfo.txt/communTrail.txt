@@ -57,7 +57,8 @@ BUILD A CUSTOM THEME LAYOUR COMPONENT FOR LIGHTNING
 
   BUILD A VERTICAL NAV MENU
    Create and Test the Nav Component
-    Extending forceCommunity:navigationMenuBase component gives new component automatic access to all navigation menu items defined in the community’s Navigation Menu component. 
+    Extending forceCommunity:navigationMenuBase component gives new component automatic access 
+     to all navigation menu items defined in the community’s Navigation Menu component. 
    Admins can define and update the items in the Navigation Menu in Community Builder.
    To show in action, the unordered list iterates through array of menuItems, 
     which is defined in the extended abstract component, 
