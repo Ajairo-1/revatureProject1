@@ -113,3 +113,157 @@ BUILD A CUSTOM THEME LAYOUR COMPONENT FOR LIGHTNING
   ADD CONFIGURATION PROPERTIES TO THE THEME LAYOUT
    you add a property to the theme layout component, 
     which lets you hide the search component completely in Community Builder.
+
+----------------------------------------------------------------------
+EXPAND REACH W/ COMMUNITIES
+  COMMUNITY ROLLOUT STRATEGY
+   PLAN COMMUNITY ROLLOUT
+    Think of as four step cyclical process:
+     establish, manage, engage, and measure
+     The first two phases involve
+      creating a community mission statement
+      developing member journeys
+      planning executive engagement
+     In the management phase, focus on promoting the communtiy
+      & having an awareness plan at every state of growth. activities in this 
+      phase include...
+        Develop a promotion plan. Promotions commonly include videos, social media, emails, and website updates.
+        Preparing resources for the community.
+        Adhering to the crawl (launch), walk (engage), and run (build value) process.
+
+   Community License(s)
+    Do your users need need access to leads, opportunities, & campaigns
+      Salesforce Partner Community License
+      if not...
+    Access needed to advanced sharing, reports & dashboards, or records across
+     accts?
+      Salesforce Customer Community Plus license
+      if not again...
+        Salesforce Customer Community License
+
+      Nuances of Customer Community Licenses
+       Members accessing Communities w/ Customer Community License have limited
+        access because they do not have roles w/in Salesforce
+       Therefore, these members can only see their own records
+        cannot see anyone else's in the community
+
+      Need to make use of a Sharing Set 
+        sharing set gives community users access to records associated w/ their 
+         accts or contacts based on their user profiles.
+        Note.(important)
+         The admin can set up only one sharing set per profile per object.
+      Sharing Group allows sharing records owned by Customer Community License
+       holders w/ internal and external users in your community.
+
+      Creating Community User(s)
+       Should "Enable Customer User" on the dropdown menu of contacts
+        steps:
+         From Setup, click Object Manager.
+         Click Contact | Page Layouts | Contact Layout.
+         In the page layout editor, click Mobile & Lightning Actions. 
+         (may need to click wrench to override customizations in Lightning & Mobile Actions section.)
+         Drag Enable Customer User button to Salesforce Mobile & Lightning Experience Actions section.
+         Click Quick Save.
+
+   Set up a Basic Community & Learn Additional Features
+    Add Community Members
+     steps:
+      Setup | "All Communities" | select All Communities.
+      Open Community Workspaces or Community Management. 
+        To access need “Create and Set Up Communities” permission.
+      Select Administration | Members.
+      Search for Customer Community profile; add to community.
+
+      Other features that can be enabled for Community
+      Chatter:
+        Chatter powers all the discussions in Customer Service and
+         Salesforce Tabs + Visualforce. drives community engagement by giving
+          users the ability to ask and answer questions, share files,
+          and participate in discussions in their Chatter feed, in groups, and on records.
+         Members in your users’ groups and communities can answer questions
+          just as they would comment on a Chatter post.
+
+      Salesforce Knowledge:
+        Build knowledge base to give your community visitors, clients,
+         partners, and service agents the ultimate in support.
+        Salesforce Knowledge lets you create and manage articles to support
+         customer base & minimize costly support calls.
+
+      Ideas:
+       Enable a group of users to post, vote for, and comment on ideas.
+       Ideas provides an online, transparent way for you to attract, manage,
+        and showcase innovation.
+
+      Leads (Partner Users Only):
+        Allows partners to have access to and create leads in your communities.
+
+      Community Management Package:
+        Use Community Management dashboards to view your community’s analytics,
+         such as metrics and trends on activity. Dashboards give you mid-term to
+         long-term views on adoption and engagement, providing you with a
+         high-level view into the health of your community.
+
+   Maximize Community Member Engagement
+    crucial that every community manager defines what engagement means to
+     their community and company.
+    How to engage users & measure whether meeting our community goals?
+    What kind of short and long-term goals are you aiming to see?
+
+   Search in Salesforce Communities
+    Search makes it easy for customers to get around the community
+     no matter what page they're on
+    w/ customizations, you can help them get there even faster
+
+    Search Out-The-Box features
+     Lemmatization
+     Lemmatization helps users find different forms of a word.
+      i.e
+       when a customer searches for bean, search returns results for beans.
+       Similarly, a search for grind also returns results for grinds and grinding
+
+     Spelling Correction
+      This feature returns results that match corrected spellings of the term.
+      So it’s no big deal when a customer isn’t quite sure how to spell
+      cappuccino, or just accidentally types fliter instead of filter
+
+     Expanded Queries
+      If a search term gets no results, this finds matches where search term 
+       is part of a word. For example, if customer searches for mocha, search 
+        also returns results for mochaccino. 
+        It also looks for matches that have slightly different punctuation.
+
+     AND/OR Searching
+      When a customer searches for a Knowledge article using multiple search
+       terms, we first run an AND search. For example, if a customer searches
+       for French press, we first look for results that contain both French and
+       press. If we don’t find many matches, we switch to an OR search.
+       This returns results that contain either French or press,
+        giving the customer more potential matches to choose from.
+
+   Build a Communityw/ Knowledge & Chat
+    Enable Live Agent & Communities
+      Live Agent is Service Cloud feature that allows you to chat w/ customers
+       directly from your website.
+       steps:
+        1. "Live Agent Settings" | select Live Agent Settings
+        2. Select Enable Live Agent
+
+      to access Live Agent, need permissions on user records
+      steps:
+       1. "Skills" | select Skills
+       2. click New
+       3. Define skill as you'd like  
+
+      w/ chat buttons, community members can chat w/ agent
+      steps:
+       1. "Chat button" | select Chat Buttons & Invitations
+       2. Click New
+       3. select the type Chat Button
+       4. Definte button as you'd like
+
+    (FINISH WHAT'S BELOW)
+    Create a Chat Snap-In
+    Enable & Configure Lightning Knowledge
+    Add Knowledge to the Community Using Topics
+    Add Branding and Components to the Community
+    Try Out Your New Community
